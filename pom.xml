@@ -5,6 +5,50 @@
 	<groupId>com.espol.edu</groupId>
 	<artifactId>labcodeinspection</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Lab Code Inspection</name>
+	<name>Lab Code Inspection - ZAMBRANO LESSETTE</name>
 	<description>Software Engineering II</description>
+	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>3.13.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<rulesets>
+						<ruleset>group3_ruleset.xml</ruleset>
+					</rulesets>
+				</configuration>
+			</plugin>
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-jxr-plugin</artifactId>
+            	<version>2.3</version>
+        	</plugin>
+		</plugins>
+	</reporting>
 </project>
